@@ -1,0 +1,159 @@
+/*The main font style for texts*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif ;
+}
+:root{
+    --myFontStyle: 'Ubuntu', sans-serif;
+    --myBlue: #68A9DA;
+    --myPink: #F4CEDC;
+    --myGrey: #E3E3E4;
+}
+body{
+    background: linear-gradient(to top ,var(--myBlue) ,var(--myPink));
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.heroSection{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 85%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    z-index: 99;
+}
+.heroSection .bgVideoContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(20px); 
+}
+/*Main section css*/
+aside{
+    position: relative;
+    border-radius: 20px;
+    background: linear-gradient(to bottom ,var(--myBlue) ,var(--myPink));
+    width: 400px;
+    height: 400px;
+}
+aside img{
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: -30%;
+    left: 20%;
+}
+.boxContainer{
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 185px;
+    height: 60px;
+    background: rgba( 255, 255, 255, 0.75 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );    
+    border-radius: 30px;
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+}
+
+.capacityBox{
+    bottom: 10%;
+    left: 5%;
+}
+.materialBox{
+    right: -10%;
+    top: 10%;
+}
+.boxContainer i{
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    
+}
+
+/*Main css*/
+main{
+    position: relative;
+    width: fit-content;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color: white;
+    
+}
+main .bigTitle{
+    font-size: 55px;
+    line-height:75px;
+    border-right: 3px solid var(--myGrey);
+    border-bottom-right-radius: 25px;
+    padding-right: 40px;
+}
+main section{
+    border-left: 3px solid var(--myGrey);
+    padding-left: 40px;
+    border-bottom-left-radius: 25px;
+}
+
+main section h1{
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+}
+main section .btnDetails{
+    border: 1px solid var(--myGrey);
+    background: rgba( 255, 255, 255, 0 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );    
+    border-radius: 30px;
+    padding: 5px 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    cursor: pointer;
+}
+
+main section .btnDetails i{
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to bottom ,var(--myBlue) ,var(--myPink));
+    font-size: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+main .sales{
+    width: 400px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 40px;
+    border-right: 3px solid var(--myGrey);
+    border-bottom-right-radius: 25px;
+
+}
