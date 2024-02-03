@@ -14,10 +14,10 @@
     --myBlue: #68A9DA;
     --myPink: #F4CEDC;
     --myGrey: #E3E3E4;
+    --myWhite: #F3F5F9;
 }
 body{
-    background: linear-gradient(to top ,var(--myBlue) ,var(--myPink));
-    background-repeat: no-repeat;
+    background: linear-gradient(var(--myWhite) ,var(--myGrey));
     height: 100vh;
 }
 .heroSection{
@@ -40,8 +40,9 @@ body{
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    filter: blur(20px); 
+    filter: blur(15px); 
 }
+
 /*Main section css*/
 aside{
     position: relative;
@@ -49,6 +50,22 @@ aside{
     background: linear-gradient(to bottom ,var(--myBlue) ,var(--myPink));
     width: 400px;
     height: 400px;
+    z-index: 1;
+}
+aside::before{
+    position: absolute;
+    content: '';
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: url('noisyBg.jpg') repeat center;
+    background-size: cover;
+    mix-blend-mode: overlay;
+    z-index: -1;
+    border-radius: 20px;
+
+    
 }
 aside img{
     position: absolute;
@@ -123,10 +140,11 @@ main section h1{
     line-height: 30px;
 }
 main section .btnDetails{
-    border: 1px solid var(--myGrey);
-    background: rgba( 255, 255, 255, 0 );
+    border: 0px solid var(--myGrey);
+    background: rgba( 255, 255, 255, 0.75 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 20px );    
+    backdrop-filter: blur( 20px );
+    color: black;
     border-radius: 30px;
     padding: 5px 10px;
     margin-top: 20px;
@@ -140,7 +158,8 @@ main section .btnDetails{
 main section .btnDetails i{
     width: 40px;
     height: 40px;
-    background: linear-gradient(to bottom ,var(--myBlue) ,var(--myPink));
+    background-color: black;
+    color: white;    
     font-size: 25px;
     border-radius: 50%;
     display: flex;
