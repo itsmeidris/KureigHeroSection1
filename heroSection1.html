@@ -8,22 +8,24 @@
     <script src="https://kit.fontawesome.com/04bf1872c5.js" crossorigin="anonymous"></script>
     <script src="gsap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>    
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <!-- Logo -->
         <a href="#" class="logo">
-            <img src="imgRes/logo.png" alt="logo" /> 
+            <img src="imgRes/logotrans.png" alt="logo" /> 
         </a>
         
         <!-- Navigation -->
         <ul class="navbar">
-            <li><a class="" href="#">HOME</a></li>
-            <li><a class="" href="#">FEATURES</a></li>
-            <li><a class="" href="#">SOLUTIONS</a></li>
-            <li><a class="" href="#">RANKINGS</a></li>
-            <li><a class="" href="#">PRICING</a></li>
+            <li><a class="" href="#sec1">HOME</a></li>
+            <li><a class="" href="#sec2">FEATURES</a></li>
+            <li><a class="" href="#sec3">PRODUCTS</a></li>
+            <li><a class="" href="#sec4">OFFERS</a></li>
+            <li><a class="" href="#sec5">TESTIMONIALS</a></li>
+            <li><a class="" href="#sec6">CONTACT</a></li>
         </ul>
   
         <!-- Header Buttons -->
@@ -34,7 +36,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="pageContainer">
+    <section class="pageContainer" id="sec1">
         <section class="heroSection">
             <!-- Background Video Container -->
             <div class="bgVideoContainer">
@@ -109,7 +111,7 @@
         </section>
 
         <!-- Coffee Pics Section -->
-        <section class="coffeePics">
+        <section class="coffeePics" id="sec2">
             <h1 class="featuresTitle">FEATURES</h1>
             <div class="coffeeFeatures">
                 <!-- Coffee Machine Feature -->
@@ -141,7 +143,7 @@
         </section>
 
         <!-- New Products Section -->
-        <section class="newPro">
+        <section class="newPro" id="sec3">
             <h1 class="newProducts">NEW PRODUCTS</h1>
             <p class="ee" style="text-align: center;line-height: 25px; font-size: 18px;font-weight: 100;">
                 Please choose our product according to your needs. We have provided them<br>
@@ -157,7 +159,7 @@
                         K-Cuo Pod Cooffe Maker,<br>
                         MultiStream Technology, Black
                     </h5>
-                    <h1 class="discountPrice">$94.99</h1>
+                    <h1 class="discountPrice">94.99</h1>
                     <button class="cart">
                         ADD TO CART 
                         <i class="fa-solid fa-cart-shopping"></i>
@@ -173,7 +175,7 @@
                             K-Cuo Pod Cooffe Maker,<br>
                             MultiStream Technology, Black
                         </h5>
-                        <h1 class="discountPrice" style="display: inline-block;">$84.99</h1>
+                        <h1 class="discountPrice" style="display: inline-block;">84.99</h1>
                         <button class="cart">
                             ADD TO CART 
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -189,7 +191,7 @@
                         K-Cuo Pod Cooffe Maker,<br>
                         MultiStream Technology, Black
                     </h5>
-                    <h1 class="discountPrice">$74.99</h1>
+                    <h1 class="discountPrice">74.99</h1>
                     <button class="cart">
                         ADD TO CART 
                         <i class="fa-solid fa-cart-shopping"></i>
@@ -198,6 +200,176 @@
             </div>
         </section>
     </section>
+
+    <section class="section-container" id="sec4">
+        <div class="left-part">
+            <h3 class="wr" id="winter" style="position: absolute; top: 10%;">WINTER DEAL DAYS</h3>
+            <h1 class="wr" id="Save">Save 20% or more on coffee makers</h1>
+            <h3 class="wr" id="beat">Beat the chill hot deals.</h3>
+            <div class="btn-details">
+                <a style="font-size: 15px;">SHOP NOW</a>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <h4  class="wr" id = "ends">Ends 1/23. Restrictions apply. See details.<h4></h4>
+        </div>
+        <div class="coffee">
+            <img src="imgRes/k-slim-black_grande.png" alt="coffee machine"/>
+        </div>
+    </section>
+
+    <section id="promotion">
+        <div class="containeree">
+            <div class="parent-promotionss ">
+                <div class="img-section">
+                    <div class="bg-image"><span></span>
+                        <img src="imgRes/img.png" alt="Cafe Image">
+                    </div>
+                </div>
+
+                <div class="promooo-product">
+                    <div class="promotion">
+                        <div class="titlesbiges">
+                           
+                            <h3>Keurig K-Supreme<br>Single Serve K-Cup<br>Pod Coffee Maker.</h3>
+                        </div>
+                        <div class="styless-icons">
+                            <div class="rankingg">
+                                
+                                <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                                <p>18,921(reviews)</p>
+                            </div>
+                            <div class="coloroptions">
+                                <p>Color Option</p>
+                                <div class="circlee">
+                                  
+                                    <div class="circlee blue">
+                                        <p class="checkmarkss">&#10003;</p>
+                                    </div>
+                                    <div class="circlee red"></div>
+                                    <div class="circlee yellow"></div>
+                                </div>
+                            </div>
+                            <div class="priceee-promo">
+                                <h2 class="pricese">
+                                    <sup>$</sup>29
+                                </h2>
+                                <p><span class="discounted-pricese">$35.99</span><br><span class="bordree">22% off</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="sec5">
+        <div class="container">
+            <div class="testi-parent">
+                <h1 >TESTIMONIALS</h1>
+                <p>Voices of Satisfaction.Discord What Our Clients Have to Say</p>
+                <div class="costumer-parent">
+                    <div class="content-costumer">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolores amet voluptatum ad necessitatibus. Commodi voluptate in aliquid dignissimos! Tenetur, officia voluptatem! Ipsum quae delectus voluptas quia dicta sit ratione!
+                        Neque rerum eveniet natus aperiam  .</p>
+                        <div class="profil-costumer">
+                            <img src="imgRes/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg" alt="Marallina Jalo">
+                            <h4>HOLLAND LIONEL</h4>
+                            <p>CEO, Confin</p>
+                        </div>
+                      </div> 
+                      <div class="content-costumer">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolores amet voluptatum ad necessitatibus. Commodi voluptate in aliquid dignissimos! Tenetur, officia voluptatem! Ipsum quae delectus voluptas quia dicta sit ratione!
+                        Neque rerum eveniet natus aperiam  .</p>
+                        <div class="profil-costumer">
+                            <img src="imgRes/ian-dooley-d1UPkiFd04A-unsplash.jpg" alt="Marallina Jalo">
+                            <h4>HOLLAND LIONEL</h4>
+                            <p>CEO, Confin</p>
+                        </div>
+                      </div>
+                      <div class="content-costumer">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolores amet voluptatum ad necessitatibus. Commodi voluptate in aliquid dignissimos! Tenetur, officia voluptatem! Ipsum quae delectus voluptas quia dicta sit ratione!
+                        Neque rerum eveniet natus  .</p>
+                        <div class="profil-costumer">
+                            <img src="imgRes/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="Marallina Jalo">
+                            <h4>HOLLAND LIONEL</h4>
+                            <p>CEO, Confin</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="bottom-section">
+                    <div class="left-arrow">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                    <div class="right-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+    </section>
+    <footer id="sec6">
+        <div class="logof">
+          <img class="logo2" src="imgRes/logotrans.png" alt="logoff">
+        </div>
+        <div class="foooter">
+          
+        <div class="menu">
+          <h4>Menu</h4>
+          <a href="#">Home </a>
+          <a href="#">About Us</a>
+          <a href="#">Product</a>
+          <a href="#">Pricing</a>
+        </div>
+        <div class="menu">
+          <h4>Resources</h4>
+          <a href="#">Forum</a>
+          <a href="#">Support</a>
+          <a href="#">Partners</a>
+          <a href="#">Events</a>
+        </div>
+  
+        <div class="menu">
+          <h4>My Account</h4>
+          <a href="#">My Orders</a>
+          <a href="#">FAQ</a>
+          <a href="#">Sales conditions</a>
+          <a href="#">Contact</a>
+          <a href="#">Legal mentions</a>
+        </div>
+  
+        <div class="sub">
+          <h4>Subscribe to Newsletter</h4>
+          <p>Sign up for exclusive offers, original stories,events and more.</p>
+          <form class="form">
+            <input type="text" placeholder="Email Address" />
+            <button class="normal" type="submit">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="logof">
+        <img  class="flogo" src="imgRes/logofot.png" alt="logof2">
+      </div>
+      <hr class="lign">
+      <div class="copyright">
+        <p>©2024 Keurig Green Mountain,Inc. - All Rights Reserved.</p>
+        <a href="#">PRODUCTS</a>
+        <a href="#">PRIVACY POLICY</a>
+        <a href="#">CUSTOMER SERVICE</a>
+        <div class="pay"><img src="imgRes/pay.png" alt="pay"></div>
+      </div>
+      </footer>
+</main>
     <!-- GSAP Animation Script -->
+    <!-- Add this script after including the GSAP library and before the closing </body> tag -->
+
+
+
 </body>
 </html>
