@@ -1,29 +1,153 @@
-/*The main font style for texts*/
+/* The main font style for texts */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 
-/*Necessary style for every css file*/
-*{
+/* Necessary style for every CSS file */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style-type: none;
     text-decoration: none;
-    font-family: 'Ubuntu', sans-serif ;
+    font-family: 'Ubuntu', sans-serif;
 }
-/*Css colors and fonts variables to be called by its names */
-:root{
+
+/* CSS colors and fonts variables to be called by their names */
+:root {
     --myFontStyle: 'Ubuntu', sans-serif;
     --myBlue: #68A9DA;
     --myPink: #F4CEDC;
-    --myGrey: #E3E3E4;
+    --myGrey: #F3F5F9;
     --myWhite: #F3F5F9;
+    --myRed: #D42E4F;
+    --myBlack: #202128;
+    --myCyan: #4BBEDC;
 }
-body{
-    background: linear-gradient(var(--myWhite) ,var(--myGrey));
-    height: 100vh;
+
+body {
+    background: linear-gradient(to bottom, var(--myBlue), var(--myPink));
 }
-/*The main style of the hero section*/
-.heroSection{
+
+/* The main style for the header section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    width: 85%;
+    background: var(--myWhite);
+    margin: 0 auto;
+    top: 0;
+    position: sticky;
+    z-index: 9999;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+/* Logo style */
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* Navigation style */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    position: relative;
+    transition: all 0.4s;
+}
+
+.navbar li a {
+    font-size: 18px;
+    padding: 10px;
+    font-weight: 200;
+    color: #1e1e1e;
+    transition: all .4s;
+}
+
+.navbar a:hover {
+    color: var(--myBlue);
+}
+
+.navbar li a::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--myBlue);
+    bottom: -10px;
+    left: 0;
+    transition: all 0.4s;
+}
+
+.navbar li a:hover::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: var(--myBlue);
+    left: 0;
+    transition: all 0.4s;
+}
+
+/* Header buttons style */
+.header-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-btn .sign-in {
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.header-btn .sign-in::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--myBlue);
+    bottom: -10px;
+    left: 0;
+    transition: all 0.4s;
+}
+
+.header-btn .sign-in:hover::after {
+    width: 100%;
+    height: 3px;
+    background: var(--myBlue);
+    left: 0;
+}
+
+.header-btn .sign-in:hover {
+    color: var(--myBlue);
+}
+
+.header-btn .sign-up {
+    color: white;
+    border: 1px solid black;
+    padding: 15px;
+    background-color: black;
+    border-radius: 30px;
+    font-size: 15px;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.header-btn .sign-up:hover {
+    border: 1px solid var(--myBlue);
+    background-color: var(--myBlue);
+}
+
+/* The main style of the hero section */
+.heroSection {
     position: relative;
     overflow: hidden;
     border-radius: 20px;
@@ -35,7 +159,8 @@ body{
     padding: 50px;
     z-index: 99;
 }
-/*The video background container style*/
+
+/* The video background container style */
 .heroSection .bgVideoContainer {
     position: absolute;
     top: 0;
@@ -44,11 +169,11 @@ body{
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    filter: blur(15px); 
+    filter: blur(10px);
 }
 
-/*The main style containing the headings ,CTA button ,ratings*/
-main{
+/* The main style containing the headings, CTA button, ratings */
+main {
     position: relative;
     width: fit-content;
     height: 500px;
@@ -56,32 +181,34 @@ main{
     justify-content: space-between;
     flex-direction: column;
     color: white;
-    
 }
-/*The big title css*/
-main .bigTitle{
+
+/* The big title CSS */
+main .bigTitle {
     font-size: 55px;
-    line-height:75px;
+    line-height: 75px;
     border-right: 3px solid var(--myGrey);
     border-bottom-right-radius: 25px;
     padding-right: 40px;
 }
-/*The headings and CTA button css*/
-main section{
+
+/* The headings and CTA button CSS */
+main section {
     border-left: 3px solid var(--myGrey);
     padding-left: 40px;
     border-bottom-left-radius: 25px;
 }
-main section h1{
+
+main section h1 {
     font-weight: 500;
     font-size: 25px;
     line-height: 30px;
 }
-main section .btnDetails{
+
+main section .btnDetails {
     border: 0px solid var(--myGrey);
-    background: rgba( 255, 255, 255, 0.75 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 20px );
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px);
     color: black;
     border-radius: 30px;
     padding: 5px 10px;
@@ -92,19 +219,21 @@ main section .btnDetails{
     width: 250px;
     cursor: pointer;
 }
-/*The ratings css*/
-main section .btnDetails i{
+
+/* The ratings CSS */
+main section .btnDetails i {
     width: 40px;
     height: 40px;
     background-color: black;
-    color: white;    
+    color: white;
     font-size: 25px;
     border-radius: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
 }
-main .sales{
+
+main .sales {
     width: 400px;
     height: auto;
     display: flex;
@@ -112,63 +241,68 @@ main .sales{
     padding-right: 40px;
     border-right: 3px solid var(--myGrey);
     border-bottom-right-radius: 25px;
-
 }
 
-/*Aside section css*/
-aside{
+/* Aside section CSS */
+aside {
     position: relative;
     border-radius: 20px;
-    background: linear-gradient(to bottom ,var(--myBlue) ,var(--myPink));
+    background: linear-gradient(to bottom, var(--myBlue), var(--myPink));
     width: 400px;
     height: 400px;
     z-index: 1;
 }
-/*The noise effect background*/
-aside::before{
+
+/* The noise effect background */
+aside::before {
     position: absolute;
     content: '';
     top: 0%;
     left: 0%;
     width: 100%;
     height: 100%;
-    background: url('noisyBg.jpg') repeat center;
+    background: url('imgRes/noisyBg.jpg') repeat center;
     background-size: cover;
     mix-blend-mode: overlay;
     z-index: -1;
     border-radius: 20px;
 }
-/*The product image*/
-aside img{
+
+/* The product image */
+aside img {
     position: absolute;
     width: 250px;
     height: auto;
     top: -30%;
     left: 20%;
 }
-/*The product description(Capacity ,Material) style*/
-.boxContainer{
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+/* The product description (Capacity, Material) style */
+.boxContainer {
+    border: 1px solid rgba(255, 255, 255, 0.18);
     width: 185px;
     height: 60px;
-    background: rgba( 255, 255, 255, 0.75 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 20px );    
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
     border-radius: 30px;
     position: absolute;
     z-index: 99;
     display: flex;
     align-items: center;
 }
-.capacityBox{
+
+.capacityBox {
     bottom: 10%;
     left: 5%;
 }
-.materialBox{
+
+.materialBox {
     right: -10%;
     top: 10%;
 }
-.boxContainer i{
+
+.boxContainer i {
     background-color: black;
     color: white;
     font-size: 25px;
@@ -178,5 +312,375 @@ aside img{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 10px;   
+    margin-left: 10px;
+}
+
+.coffeePics {
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 10px 0px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.coffeePics::before {
+    position: absolute;
+    content: '';
+    background-color: var(--myBlue);
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    border-radius: 30px;
+}
+
+.coffeePics::after {
+    position: absolute;
+    content: '';
+    background-color: var(--myBlack);
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    top: 4%;
+    left: 1%;
+    border-radius: 30px;
+}
+
+.coffeePics .coffeeFeatures {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.coffeePics .featuresTitle {
+    position: relative;
+    font-size: 60px;
+    font-weight: 200;
+    margin: 30px 0px;
+    padding-bottom: 5px;
+    color: var(--myBlack);
+    z-index: 1;
+}
+
+.coffeePics .featuresTitle::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--myWhite);
+    z-index: -1;
+}
+
+.coffeePics .featuresTitle::after {
+    position: absolute;
+    content: '';
+    background-color: var(--myBlack);
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    top: 7%;
+    left: 2%;
+}
+
+/* The image background positioning style */
+.coffeePics .coffeeContainer {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    z-index: 1;
+    transition: all .5s;
+}
+
+.coffeePics .coffeeServe {
+    background-image: url('imgRes/serveCoffee.jpg');
+}
+
+.coffeePics .coffeeMachine {
+    background-image: url('imgRes/keurigMachinejpg.jpg');
+}
+
+/* The background dark effect on the 2 cards */
+.coffeeContainer::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+    background: linear-gradient(to top, var(--myBlack), transparent);
+    border-radius: 20px;
+}
+
+.coffeePics .coffeeContainer:hover {
+    transform: scale(1.15);
+}
+
+.coffeePics .coffeeContainer:hover h1 {
+    bottom: -200px;
+}
+
+.coffeePics .coffeeContainer:hover .boxContainer {
+    top: -200px;
+}
+
+/* The big titles style */
+.coffeePics .coffeeContainer h1 {
+    position: absolute;
+    bottom: 5%;
+    left: 2.5%;
+    color: var(--myWhite);
+    font-size: 50px;
+    font-weight: 300;
+    border-right: 3px solid var(--myGrey);
+    padding-right: 25px;
+    transition: all 1s;
+}
+
+/* The style for the top cards with the icon */
+.coffeePics .coffeeContainer .boxContainer {
+    position: absolute;
+    top: 5%;
+    left: 2.5%;
+    width: 185px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    color: var(--myWhite);
+    transition: all 1s;
+}
+
+.coffeePics .coffeeContainer .boxContainer i {
+    background-color: var(--myWhite);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.newPro {
+    position: relative;
+    border-radius: 30px;
+    width: 85%;
+    margin: 50px auto;
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.newPro::before {
+    position: absolute;
+    content: '';
+    background-color: var(--myWhite);
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    border-radius: 30px;
+}
+
+.newPro::after {
+    position: absolute;
+    content: '';
+    background-color: var(--myBlack);
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    top: 4%;
+    left: 1%;
+    border-radius: 30px;
+}
+
+.newProducts {
+    position: relative;
+    font-size: 60px;
+    font-weight: 200;
+    margin: 10px 0px;
+    padding-bottom: 5px;
+    color: white;
+    z-index: 1;
+}
+
+.newProducts::before {
+    position: absolute;
+    content: '';
+    background-color: var(--myBlue);
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.newProducts::after {
+    position: absolute;
+    content: '';
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    top: 7%;
+    left: 2%;
+}
+
+.newPro .ee {
+    opacity: .5;
+    margin: 10px 0px;
+}
+
+.pro-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.pro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 75px;
+    z-index: 1;
+    color: var(--myWhite);
+}
+
+.proRed::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--myRed);
+    z-index: -1;
+}
+
+.proRed::after {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--myBlack);
+    z-index: -3;
+}
+
+.proBlack::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--myBlack);
+    z-index: -1;
+}
+
+.proBlack::after {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--myCyan);
+    z-index: -3;
+}
+
+.proBlue::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--myCyan);
+    z-index: -1;
+}
+
+.proBlue::after {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--myRed);
+    z-index: -3;
+}
+
+.pro img {
+    width: 80%;
+    height: auto;
+}
+
+.pro .discountPrice {
+    position: relative;
+    margin: 5px 0px;
+}
+
+.pro .discountPrice::before {
+    position: absolute;
+    top: 0%;
+    left: -15%;
+    font-weight: 100;
+    content: '$';
+    font-size: 15px;
+}
+
+.pro .discountPrice::after {
+    position: absolute;
+    top: 0%;
+    right: -80%;
+    font-weight: 400;
+    content: '$139,99';
+    color: white;
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+.pro .cart {
+    border: 2px solid #cbd6f0;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(71, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 160px;
+    padding: 3px 8px;
+    margin: 5px 0px;
+}
+
+.pro .cf2 {
+    margin-top: 11px;
+}
+
+.pro h5 {
+    text-align: center;
+    font-family: sans-serif;
+    opacity: 0.6;
+}
+
+.pro .cart i {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, var(--myBlue), var(--myPink));
 }

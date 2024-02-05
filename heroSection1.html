@@ -7,73 +7,197 @@
     <link rel="stylesheet" href="heroSection1.css">
     <script src="https://kit.fontawesome.com/04bf1872c5.js" crossorigin="anonymous"></script>
     <script src="gsap.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 <body>
-    
-    <section class="heroSection">
-        <div class="bgVideoContainer">
-            <video autoplay muted loop class="videoBg">
-                <source src="KeurigVideo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+    <!-- Header Section -->
+    <header>
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <img src="imgRes/logo.png" alt="logo" /> 
+        </a>
+        
+        <!-- Navigation -->
+        <ul class="navbar">
+            <li><a class="" href="#">HOME</a></li>
+            <li><a class="" href="#">FEATURES</a></li>
+            <li><a class="" href="#">SOLUTIONS</a></li>
+            <li><a class="" href="#">RANKINGS</a></li>
+            <li><a class="" href="#">PRICING</a></li>
+        </ul>
+  
+        <!-- Header Buttons -->
+        <div class="header-btn">
+            <a class="sign-in">SIGN IN</a>
+            <button class="sign-up">SIGN UP FOR FREE</button>
         </div>
-        <main class="mainSection">
-            <div class="bigTitle">
-                <h1>KEURIG<br>
-                K-EXPRESS<br>
-                COFFEE.</h1>
-            </div>
-            <section>
-                <div class="description">
-                    <h1>Welcome to Keurig quality,<br>
-                    at our most welcoming price.</h1>
-                </div>
-                <div class="btnDetails">
-                    <a href="#" style="color: black;">SEE MORE DETAILS</a>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </section>
-            <div class="sales">
-                <div class="ratings">
-                    <h3>4.8
-                        <span style="margin-left: 10px;">
-                            <i class="fa-solid fa-star" style="color: #FF8C04;"></i>
-                            <i class="fa-solid fa-star" style="color: #FF8C04;"></i>
-                            <i class="fa-solid fa-star" style="color: #FF8C04;"></i>
-                            <i class="fa-solid fa-star" style="color: #FF8C04;"></i>
-                            <i class="fa-solid fa-star" style="color: #FF8C04;"></i>
-                        </span>
-                    </h3>
-                    <h5 style="margin-top: 5px;font-weight: 100;">2,290 ratings</h5>
-                </div>
-                <div class="salesNumber">
-                    <h3>10K+</h3>
-                    <h5 style="margin-top: 5px; font-weight: 100;">Brought in past month</h5>
-                </div>
-            </div>
-        </main>
-    
-        <aside class="mainContainer">
-          <img src="coffePng2.png" />
-          <div class="capacityBox boxContainer">
-            <i class="fa-solid fa-expand"></i>     
-            <div style="margin-left: 10px;">
-              <h5 style="font-weight: 100">Capacity</h5>
-              <h4>14 Ounces</h4>
-            </div>
-          </div>
-          <div class="materialBox boxContainer">
-            <i class="fa-solid fa-newspaper"></i>
-            <div style="margin-left: 10px;">
-                <h5 style="font-weight: 100;">Material</h5>
-                <h4>Stainless</h4>
-            </div>
-          </div>
-        </aside>
-    </section>
+    </header>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>  
+    <!-- Hero Section -->
+    <section class="pageContainer">
+        <section class="heroSection">
+            <!-- Background Video Container -->
+            <div class="bgVideoContainer">
+                <video autoplay muted loop class="videoBg">
+                    <source src="imgRes/KeurigVideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Main Content -->
+            <main class="mainSection">
+                <!-- Big Title -->
+                <div class="bigTitle">
+                    <h1>KEURIG<br>
+                    K-EXPRESS<br>
+                    COFFEE.</h1>
+                </div>
+
+                <!-- Description and CTA Button -->
+                <section>
+                    <div class="description">
+                        <h1>Welcome to Keurig quality,<br>
+                        at our most welcoming price.</h1>
+                    </div>
+                    <div class="btnDetails">
+                        <a href="#" style="color: black;">SEE MORE DETAILS</a>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </section>
+
+                <!-- Sales and Ratings -->
+                <div class="sales">
+                    <div class="ratings">
+                        <h3>4.8
+                            <span style="margin-left: 10px;">
+                                <i class="fa-solid fa-star" style="color: #FF8C04;"></i>
+                                <i class="fa-solid fa-star" style="color: #FF8C04;"></i>
+                                <i class="fa-solid fa-star" style="color: #FF8C04;"></i>
+                                <i class="fa-solid fa-star" style="color: #FF8C04;"></i>
+                                <i class="fa-solid fa-star" style="color: #FF8C04;"></i>
+                            </span>
+                        </h3>
+                        <h5 style="margin-top: 5px;font-weight: 100;">2,290 ratings</h5>
+                    </div>
+                    <div class="salesNumber">
+                        <h3>10K+</h3>
+                        <h5 style="margin-top: 5px; font-weight: 100;">Brought in the past month</h5>
+                    </div>
+                </div>
+            </main>
     
+            <!-- Aside Section -->
+            <aside class="mainContainer">
+                <img src="imgRes/coffePng2.png" />
+                <!-- Capacity Box -->
+                <div class="capacityBox boxContainer">
+                    <i class="fa-solid fa-expand"></i>     
+                    <div style="margin-left: 10px;">
+                        <h5 style="font-weight: 100">Capacity</h5>
+                        <h4>14 Ounces</h4>
+                    </div>
+                </div>
+                <!-- Material Box -->
+                <div class="materialBox boxContainer">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <div style="margin-left: 10px;">
+                        <h5 style="font-weight: 100;">Material</h5>
+                        <h4>Stainless</h4>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <!-- Coffee Pics Section -->
+        <section class="coffeePics">
+            <h1 class="featuresTitle">FEATURES</h1>
+            <div class="coffeeFeatures">
+                <!-- Coffee Machine Feature -->
+                <div class="coffeeMachine coffeeContainer">
+                    <div class="boxContainer">
+                        <i class="fa-brands fa-unity"></i>
+                        <div class="smallDesc" style="margin-left: 10px;">
+                            <h5 style="font-weight: 100; margin-bottom: 5px;">Item Weight</h5>
+                            <h4>2.6 POUNDS</h4>
+                        </div>
+                    </div>
+                    <h1>Find the<br>
+                    perfect gifts.</h1>
+                </div>
+
+                <!-- Coffee Serve Feature -->
+                <div class="coffeeServe coffeeContainer">
+                    <div class="boxContainer">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <div class="smallDesc" style="margin-left: 10px;">
+                            <h5 style="font-weight: 100; margin-bottom: 5px;">Wattage</h5>
+                            <h4>1000 watts</h4>
+                        </div>
+                    </div>
+                    <h1>Rich, creamy, and<br>
+                    dairy-free.</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Products Section -->
+        <section class="newPro">
+            <h1 class="newProducts">NEW PRODUCTS</h1>
+            <p class="ee" style="text-align: center;line-height: 25px; font-size: 18px;font-weight: 100;">
+                Please choose our product according to your needs. We have provided them<br>
+                with the best quality and different types of cooking options.
+            </p>
+
+            <div class="pro-container">
+                <!-- Red Product -->
+                <div class="pro proRed">
+                    <img src="imgRes/reeeeeeeeeeeeeed.png" alt="radk" />
+                    <h5 style="line-height: 20px; margin: 15px 0px;">
+                        Keurig® K-Supreme Single<br> Serve
+                        K-Cuo Pod Cooffe Maker,<br>
+                        MultiStream Technology, Black
+                    </h5>
+                    <h1 class="discountPrice">$94.99</h1>
+                    <button class="cart">
+                        ADD TO CART 
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                </div>
+
+                <!-- Black Product -->
+                <div class="pro proBlack">
+                    <img src="imgRes/blaaaaaaaaack.png" alt="black" style="width: 85%;"/>
+                    <div class="cf2">
+                        <h5 style="line-height: 20px; margin: 15px 0px;">
+                            Keurig® K-Supreme Single<br> Serve
+                            K-Cuo Pod Cooffe Maker,<br>
+                            MultiStream Technology, Black
+                        </h5>
+                        <h1 class="discountPrice" style="display: inline-block;">$84.99</h1>
+                        <button class="cart">
+                            ADD TO CART 
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Blue Product -->
+                <div class="pro proBlue">
+                    <img src="imgRes/bllllllllllllllllue.png" alt="bluek" />
+                    <h5 style="line-height: 20px; margin: 15px 0px;">
+                        Keurig® K-Supreme Single<br> Serve
+                        K-Cuo Pod Cooffe Maker,<br>
+                        MultiStream Technology, Black
+                    </h5>
+                    <h1 class="discountPrice">$74.99</h1>
+                    <button class="cart">
+                        ADD TO CART 
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- GSAP Animation Script -->
 </body>
 </html>
