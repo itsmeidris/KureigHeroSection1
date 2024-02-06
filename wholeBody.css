@@ -1,0 +1,29 @@
+/* The main font style for texts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+/* Necessary style for every CSS file */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* CSS colors and fonts variables to be called by their names */
+:root {
+    --myFontStyle: 'Ubuntu', sans-serif;
+    --myBlue: #68A9DA;
+    --myPink: #F4CEDC;
+    --myGrey: #F3F5F9;
+    --myWhite: #F3F5F9;
+    --myRed: #D42E4F;
+    --myBlack: #202128;
+    --myCyan: #4BBEDC;
+}
+
+body {
+    background: linear-gradient(to bottom, var(--myBlue), var(--myPink) , var(--myBlue), var(--myPink));
+}

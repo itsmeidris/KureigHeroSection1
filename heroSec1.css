@@ -1,0 +1,167 @@
+.heroSection {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 85%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    z-index: 99;
+}
+
+/* The video background container style */
+.heroSection .bgVideoContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+/* The main style containing the headings, CTA button, ratings */
+main {
+    position: relative;
+    width: fit-content;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color: white;
+}
+
+/* The big title CSS */
+main .bigTitle {
+    font-size: 55px;
+    line-height: 75px;
+    border-right: 3px solid var(--myGrey);
+    border-bottom-right-radius: 25px;
+    padding-right: 40px;
+}
+
+/* The headings and CTA button CSS */
+main section {
+    border-left: 3px solid var(--myGrey);
+    padding-left: 40px;
+    border-bottom-left-radius: 25px;
+}
+
+main section h1 {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+main section .btnDetails {
+    border: 0px solid var(--myGrey);
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px);
+    color: black;
+    border-radius: 30px;
+    padding: 5px 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    cursor: pointer;
+}
+
+/* The ratings CSS */
+main section .btnDetails i {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .sales {
+    width: 400px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 40px;
+    border-right: 3px solid var(--myGrey);
+    border-bottom-right-radius: 25px;
+}
+
+/* Aside section CSS */
+aside {
+    position: relative;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, var(--myBlue), var(--myPink));
+    width: 400px;
+    height: 400px;
+    z-index: 1;
+}
+
+/* The noise effect background */
+aside::before {
+    position: absolute;
+    content: '';
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: url('imgRes/noisyBg.jpg') repeat center;
+    background-size: cover;
+    mix-blend-mode: overlay;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+/* The product image */
+aside img {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: -30%;
+    left: 20%;
+}
+
+/* The product description (Capacity, Material) style */
+.boxContainer {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 185px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+}
+
+.capacityBox {
+    bottom: 10%;
+    left: 5%;
+}
+
+.materialBox {
+    right: -10%;
+    top: 10%;
+}
+
+.boxContainer i {
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}

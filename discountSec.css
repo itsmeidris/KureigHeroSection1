@@ -1,0 +1,84 @@
+.section-container {
+    background: linear-gradient(130deg, #376386, #afd6dd);
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    color: var(--myWhite);
+}
+.section-container::before {
+    position: absolute;
+    content: '';
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: url('imgRes/noisyBg.jpg') repeat center;
+    background-size: cover;
+    mix-blend-mode: overlay;
+    opacity: .2;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.left-part{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 35px;
+}
+
+#winter{
+    position: absolute; 
+    top: 10%;
+    border-bottom: 2px solid var(--myWhite);
+}
+
+#Save {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 70px;
+    font-weight: 2000;
+
+}
+
+#beat {
+    font-size: 22px;
+    font-weight: 350;
+}
+
+/*button*/
+.btn-details {
+    border-radius: 30px;
+    background: var(--myWhite);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    padding: 5px 10px;
+    margin: 15px 0px;
+    color: var(--myBlack);
+    position: absolute;
+    bottom: 8%;
+}
+.btn-details i {
+    background: linear-gradient(115deg, var(--myBlue), var(--myPink));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 25px;
+}
+#ends {
+    position: absolute;
+    bottom: 5%;
+    font-weight: 100;
+    font-size: 18px;
+    opacity: .7;
+}

@@ -1,0 +1,121 @@
+
+/* The main style for the header section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 85%;
+    background: rgba( 8, 8, 8, 0.25 );
+    backdrop-filter: blur( 15.5px );  
+    color: var(--myWhite);  
+    margin: 0 auto;
+    top: 0;
+    position: sticky;
+    z-index: 9999;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+/* Logo style */
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* Navigation style */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    position: relative;
+    transition: all 0.4s;
+}
+
+.navbar li a {
+    font-size: 18px;
+    padding: 10px;
+    font-weight: 200;
+    color: var(--myWhite);
+    transition: all .4s;
+}
+
+.navbar a:hover {
+    color: var(--myBlue);
+}
+
+.navbar li a::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--myBlue);
+    bottom: -10px;
+    left: 0;
+    transition: all 0.4s;
+}
+
+.navbar li a:hover::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: var(--myBlue);
+    left: 0;
+    transition: all 0.4s;
+}
+
+/* Header buttons style */
+.header-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-btn .sign-in {
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.header-btn .sign-in::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--myBlue);
+    bottom: -10px;
+    left: 0;
+    transition: all 0.4s;
+}
+
+.header-btn .sign-in:hover::after {
+    width: 100%;
+    height: 3px;
+    background: var(--myBlue);
+    left: 0;
+}
+
+.header-btn .sign-in:hover {
+    color: var(--myBlue);
+}
+
+.header-btn .sign-up {
+    color: white;
+    border: 1px solid black;
+    padding: 15px;
+    background-color: black;
+    border-radius: 30px;
+    font-size: 15px;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.header-btn .sign-up:hover {
+    border: 1px solid var(--myBlue);
+    background-color: var(--myBlue);
+}

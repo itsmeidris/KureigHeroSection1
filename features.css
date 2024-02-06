@@ -1,0 +1,116 @@
+.coffeePics {
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 10px 0px;
+    cursor: pointer;
+    z-index: 1;
+    background: rgba( 255, 255, 255, 0.5 );
+    backdrop-filter: blur( 20px );}
+
+.coffeePics .coffeeFeatures {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.coffeePics .featuresTitle {
+    position: relative;
+    font-size: 60px;
+    font-weight: 200;
+    margin: 30px 0px;
+    padding-bottom: 5px;
+    color: var(--myBlack);
+    z-index: 1;
+}
+
+/* The image background positioning style */
+.coffeePics .coffeeContainer {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    z-index: 1;
+    transition: all .5s;
+}
+
+.coffeePics .coffeeServe {
+    background-image: url('imgRes/serveCoffee.jpg');
+}
+
+.coffeePics .coffeeMachine {
+    background-image: url('imgRes/keurigMachinejpg.jpg');
+}
+
+/* The background dark effect on the 2 cards */
+.coffeeContainer::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+    background: linear-gradient(to top, var(--myBlack), transparent);
+    border-radius: 20px;
+}
+
+.coffeePics .coffeeContainer:hover {
+    transform: scale(1.15);
+}
+
+.coffeePics .coffeeContainer:hover h1 {
+    bottom: -200px;
+}
+
+.coffeePics .coffeeContainer:hover .boxContainer {
+    top: -200px;
+}
+
+/* The big titles style */
+.coffeePics .coffeeContainer h1 {
+    position: absolute;
+    bottom: 5%;
+    left: 2.5%;
+    color: var(--myWhite);
+    font-size: 50px;
+    font-weight: 300;
+    border-right: 3px solid var(--myGrey);
+    padding-right: 25px;
+    transition: all 1s;
+}
+
+/* The style for the top cards with the icon */
+.coffeePics .coffeeContainer .boxContainer {
+    position: absolute;
+    top: 5%;
+    left: 2.5%;
+    width: 185px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    color: var(--myWhite);
+    transition: all 1s;
+}
+
+.coffeePics .coffeeContainer .boxContainer i {
+    background-color: var(--myWhite);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}

@@ -1,0 +1,93 @@
+.container {
+    margin: 100px auto;
+    width: 85%;
+    background: rgba( 255, 255, 255, 0.5 );
+    backdrop-filter: blur( 20px );    
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+
+}
+.container h1 {
+    color: var(--myBlack);
+    padding: 20px 0px;
+    font-size: 60px;
+    font-weight: 200;
+    text-align: center;
+}
+p {
+    color: #666;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.costumer-parent {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 10px;
+    
+}
+
+.content-costumer {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.fas.fa-star {
+    color: #ffd700;
+    margin: 20px 0;
+}
+
+.profil-costumer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profil-costumer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profil-costumer p {
+    margin:0px;
+    padding-top:5px ;
+    color: #757575;
+    font-size: 12px;
+}
+.bottom-section {
+    display: flex;
+    justify-content: center;
+    padding-top:60px;
+    
+}
+.left-arrow,
+.right-arrow {
+    width: 40px; /* Adjust the width and height to make it circular */
+    height: 40px;
+    border-radius: 50%; /* Set border-radius to 50% for a circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 5px;
+}
+.left-arrow{
+    background: linear-gradient(to bottom, var(--myBlue), var(--myPink));
+}
+/* Adjust the arrow icon size and color as needed */
+.left-arrow i,
+.right-arrow i {
+    font-size: 24px;
+    color: #333;
+}
